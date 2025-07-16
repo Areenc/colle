@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="reservation-title">Reservation</title>
+  <link rel="stylesheet" href="projectStyle.css" />
+</head>
+<body>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <h1 data-i18n="reservation-title">Book Your Table</h1>
+  </header>
+
+  <main>
+    <!-- قسم النموذج لطلب الحجز -->
+    <div class="text-style" style="max-width: 400px; margin: 0 auto; text-align: center;">
+      <form action="reservation.php" method="post" onsubmit="return confirmSubmit()">
+      
+        <!-- حقل الاسم -->
+        <label for="name" data-i18n="reservation-name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name" required />
+        
+        <!-- حقل البريد الإلكتروني -->
+        <label for="email" data-i18n="reservation-email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br>
+        
+        <!-- حقل رقم الهاتف -->
+        <label for="phone" data-i18n="reservation-phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <br>
+
+        <!-- حقل عدد الأشخاص -->
+        <label for="people" data-i18n="reservation-people">Number of People:</label>
+        <input type="number" id="people" name="num" min="1" required />
+        <br>
+
+        <!-- حقل التاريخ -->
+        <label for="date" data-i18n="reservation-date">Date:</label>
+        <input type="date" id="date" name="date" required />
+        <br>
+
+        <!-- حقل الوقت -->
+        <label for="time" data-i18n="reservation-time">Time:</label>
+        <input type="time" id="time" name="time" required />
+        <br>
+
+        <!-- زر الإرسال -->
+        <button type="submit" class="button" data-i18n="reservation-submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- زر الرجوع إلى الواجهة الرئيسية -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="interface.html" class="button" data-i18n="reservation-back">Back to Interface</a>
+    </div>
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer>
+    <div class="contact">
+        <a href="contact.html" data-i18n="interface-contact">We’d Love to Hear from You</a>
+    </div>
+    <p data-i18n="interface-rights">&copy; 2025 All Rights Reserved</p>
+  </footer>
+
+  <!-- تبديل اللغة -->
+  <div class="language-switcher">
+    <button onclick="setLanguage('en')">English</button> |
+    <button onclick="setLanguage('ar')">العربية</button>
+  </div>
+
+  <!-- تضمين الجافا سكريبت الخاص بالترجمة والتحقق من الحقول -->
+  <script src="javafile.js"></script>
+  <script>
+    // دالة تحقق من الحقول قبل الإرسال
+    function confirmSubmit() {
+      // الحصول على قيم الحقول
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const people = document.getElementById("people").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const time = document.getElementById("time").value.trim();
+
+      // التحقق من تعبئة جميع الحقول
+      if (!name || !phone||  !email || !people||  !date || !time) {
+        alert("❗️ Please fill out all fields."); // اختياري: يمكن استبداله بنداء ترجمة
+        return false;
+      }
+
+      // إذا تم التحقق بنجاح
+      alert("✅ Your reservation has been received. Thank you!"); // اختياري: يمكن استبداله بنداء ترجمة
+      return true;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="interface-contact">Contact Us</title>
+    <link rel="stylesheet" href="projectStyle.css">
+    <style>
+        /* تحديد أقصى عرض للنموذج */
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* تصميم صندوق النموذج مع تحديد الأبعاد والتنسيقات */
+        .form-box {
+            background-color: #fdf6ef; /* تحديد لون الخلفية */
+            max-width: 600px; /* تحديد أقصى عرض */
+            margin: 30px auto; /* إضافة مسافة أعلى وأسفل */
+            padding: 30px; /* إضافة مسافة داخل الصندوق */
+            border-radius: 10px; /* جعل الحواف دائرية */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل للصندوق */
+        }
+
+        /* تنسيق رسائل الخطأ والنجاح */
+        .message-box {
+            padding: 15px; /* إضافة مسافة داخل الرسالة */
+            margin: 20px auto; /* إضافة مسافة من الأعلى والأسفل */
+            border-radius: 8px; /* تدوير الحواف */
+            max-width: 600px; /* تحديد أقصى عرض للرسالة */
+            text-align: center; /* محاذاة النص في الوسط */
+            font-weight: bold; /* جعل النص عريض */
+        }
+
+        /* تصميم الرسالة عند النجاح */
+        .success {
+            background-color: #d4edda; /* خلفية النجاح باللون الأخضر الفاتح */
+            color: #155724; /* اللون النصي عند النجاح */
+            border: 1px solid #c3e6cb; /* حدود للرسالة باللون الأخضر الفاتح */
+        }
+
+        /* تصميم الرسالة عند حدوث خطأ */
+        .error {
+            background-color: #f8d7da; /* خلفية الخطأ باللون الأحمر الفاتح */
+            color: #721c24; /* اللون النصي عند حدوث الخطأ */
+            border: 1px solid #f5c6cb; /* حدود للرسالة باللون الأحمر الفاتح */
+        }
+
+        /* تنسيق التسمية داخل النموذج */
+        .form-box label {
+            display: block; /* جعل التسمية تظهر في سطر منفصل */
+            text-align: left; /* محاذاة التسمية إلى اليسار */
+            margin: 15px auto 5px auto; /* إضافة مسافة بين التسمية والعناصر الأخرى */
+            max-width: 90%; /* تحديد أقصى عرض للتسمية */
+            font-weight: bold; /* جعل النص عريض */
+            color: #3e2f1c; /* تحديد لون التسمية */
+        }
+
+        /* تنسيق الحقول داخل النموذج */
+        .form-box input[type="text"],
+        .form-box input[type="email"],
+        .form-box textarea {
+            display: block; /* جعل الحقول تظهر في سطور مستقلة */
+            margin: 0 auto 15px auto; /* إضافة مسافة أسفل الحقل */
+            width: 90%; /* تحديد عرض الحقل */
+            padding: 10px; /* إضافة مسافة داخل الحقل */
+            border: 1px solid #ccc; /* تحديد حدود الحقل */
+            border-radius: 6px; /* تدوير الحواف */
+            font-family: 'Georgia', serif; /* تحديد نوع الخط */
+        }
+
+        /* تنسيق المحاذاة في المنتصف */
+        .center {
+            text-align: center; /* محاذاة النص في المنتصف */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 data-i18n="interface-contact">Contact Us</h1>
+</header>
+
+<main>
+    <div class="message-box error" style="display: none;" data-i18n="reservation-alert-incomplete">Please fill out all fields.</div>
+    <div class="message-box success" style="display: none;" data-i18n="contact-alert-success">Your message has been sent successfully!</div>
+
+    <form method="POST" action="contact.php" class="text-style">
+        <label for="name" data-i18n="reservation-name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email" data-i18n="reservation-email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message" data-i18n="interface-contact">Message:</label>
+        <textarea id="message" name="message" rows="5" style="width: 90%; display: block; margin: 0 auto 15px auto;"></textarea>
+
+        <div class="center">
+            <button type="submit" class="button" data-i18n="reservation-submit">Send Message</button>
+        </div>
+    </form>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="interface.html" class="button" data-i18n="reservation-back">Back to Interface</a>
+    </div>
+</main>
+
+<div class="language-switcher">
+    <button onclick="setLanguage('en')">English</button> |
+    <button onclick="setLanguage('ar')">العربية</button>
+</div>
+
+<footer>
+    <p data-i18n="interface-rights">&copy; 2025 Your Website. All rights reserved.</p>
+</footer>
+
+<script src="javafile.js"></script>
+</body>
+</html>

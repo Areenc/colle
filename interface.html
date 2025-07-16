@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="interface-title">Website Interface</title>
+    <link rel="stylesheet" href="projectStyle.css">
+</head>
+<body>
+    <header>
+        <h1 data-i18n="interface-welcome">Welcome to L‘ETO!</h1>
+    </header>
+    <main>
+        <div class="grid-container large-grid" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <!-- هنا بنعرض 3 أقسام: القائمة، الحجز، والنبذة عن المكان -->
+            <div style="text-align: center;">
+                <a href="menu.html">
+                    <img src="menu.jpg" alt="Menu" style="width: 200px; height: 200px; object-fit: cover; border-radius: 5px;">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; color: #c76c3a;" data-i18n="interface-menu">Check Out Our Delicious Menu!</p>
+            </div>
+            <div style="text-align: center;">
+                <a href="reservation.html">
+                    <img src="https://th.bing.com/th/id/OIP.lJDpQHfWxJzywNsXZKYFPAHaE7?rs=1&pid=ImgDetMain" alt="Reservation" style="width: 200px; height: 200px; object-fit: cover; border-radius: 5px;">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; color: #c76c3a;" data-i18n="interface-reservation">Book Your Spot Now!</p>
+            </div>
+            <div style="text-align: center;">
+                <a href="about.html">
+                    <img src="https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_3840,ar_4:3,g_center,f_auto/cms/reviews/leto-caffe/banners/1605614575.3322008" alt="About" style="width: 200px; height: 200px; object-fit: cover; border-radius: 5px;">
+                </a>
+                <p style="margin-top: 10px; font-size: 14px; color: #c76c3a;" data-i18n="interface-about">Discover the Story Behind L‘ETO</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- الجزء ده فيه تواصل مع الزوار وروابطهم لصفحات تانية زي "تواصل معنا" وحقوق النشر -->
+        <div class="contact">
+            <a href="contact.html" data-i18n="interface-contact">We’d Love to Hear from You</a>
+        </div>
+        <p data-i18n="interface-rights">&copy; 2025 All Rights Reserved</p>
+    </footer>
+
+    <!-- ده الجزء الخاص بتغيير اللغة، بنعرض زرارين للغة الإنجليزية والعربية -->
+    <div class="language-switcher">
+        <button onclick="setLanguage('en')">English</button> |
+        <button onclick="setLanguage('ar')">العربية</button>
+    </div>
+
+    <script src="javafile.js"></script>
+</body>
+</html>

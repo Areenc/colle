@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="about-title">About Us</title>
+    <link rel="stylesheet" href="projectStyle.css">
+</head>
+<body>
+    <header>
+        <h1 data-i18n="about-header">About Us</h1>
+    </header>
+    <main>
+
+        <!-- قسم: THE NAME -->
+        <div class="content-section" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <img src="name.jpg" alt="Amazing Desserts" class="image-style" style="width: 300px; height: auto; margin-right: 20px; border: 2px solid #c76c3a; border-radius: 5px; padding: 5px;">
+            <div class="text-style" style="margin-left: 20px;">
+                <h2 data-i18n="about-name">THE NAME</h2>
+                <h6 data-i18n="about-name-description">Every aspect of L’ETO was inspired by the core components of summer</h6>
+                <p data-i18n="about-name-description-text">
+                    L’ETO is a name created by synergy of French & Eastern European languages semantically similar to the word "summer":
+                    [L'ete (French) / Лето (Russian) / Lato (Polish)]
+                </p>
+            </div>
+        </div><!-- هذا القسم يوضح كيف جابوا اسم "L'ETO" بالدمج بين لغات مختلفة تشترك في معنى كلمة "الصيف" -->
+
+        <!-- قسم: 40 Restaurants -->
+        <div class="content-section" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div class="text-style" style="margin-right: 20px;">
+                <h2 data-i18n="about-restaurants">40 Restaurants</h2>
+                <p data-i18n="about-restaurants-description">
+                    L'ETO should always appear as a high-end restaurant with a warm feel. London, Dubai, Riyadh, Doha, Abu Dhabi, Muscat, Jeddah, Amman - the look, feel, and brand identity of L'ETO reflected and consistent in all future locations.
+                </p>
+            </div>
+            <img src="four.jpg" alt="Person holding a chair" class="image-style" style="width: 300px; height: auto; margin-left: 20px; border: 2px solid #c76c3a; border-radius: 5px; padding: 5px;">
+        </div><!-- في هذا القسم، يتكلم عن كيف "L'ETO" في أكثر من 40 مطعم حول العالم، و إنهم دايمًا يحافظون على نفس الطابع الفاخر في كل الفروع -->
+
+        <!-- قسم: 7 Countries -->
+        <div class="content-section" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <img src="seven.jpg" alt="Orange Parrot" class="image-style" style="width: 300px; height: auto; margin-right: 20px; border: 2px solid #c76c3a; border-radius: 5px; padding: 5px;">
+            <div class="text-style" style="margin-left: 20px;">
+                <h2 data-i18n="about-countries">7 Countries</h2>
+                <p data-i18n="about-countries-description">
+                    Every L'ETO around the world will keep the main elements of the brand, however the location and the space will always show unique characteristics and specificities.
+                </p>
+            </div>
+        </div><!-- هذا القسم يوضح أن "L'ETO" موجودة في 7 دول مختلفة، لكن كل فرع عنده طابع مميز يتناسب مع المكان اللي موجود فيه -->
+
+        <!-- قسم: 1000 Members -->
+        <div class="content-section" style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="text-style" style="margin-right: 20px;">
+                <h2 data-i18n="about-members">1000 Members</h2>
+                <p data-i18n="about-members-description">
+                    More than 1000 staff members of the L'ETO team bring pleasure and delights to our wonderful customers.
+                </p>
+            </div>
+            <img src="member.jpg" alt="Exceptional Coffee" class="image-style" style="width: 300px; height: auto; margin-left: 20px; border: 2px solid #c76c3a; border-radius: 5px; padding: 5px;">
+        </div><!-- هذا القسم يتكلم عن عدد فريق العمل الكبير في "L'ETO" اللي يتعدى الـ 1000 شخص واللي يقدمون أفضل خدمة لزبائنهم -->
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="interface.html" class="button" data-i18n="reservation-back">Back to Interface</a>
+        </div><!-- هنا في رابط يعيدك للواجهة الرئيسية، يعني ترجع للصفحة الأساسية للموقع -->
+
+    </main>
+    <footer>
+        <div class="contact">
+            <a href="contact.html" data-i18n="interface-contact">We’d Love to Hear from You</a>
+        </div><!-- في هذا القسم، عندك رابط صفحة التواصل، يعني لو حبيت تتواصل مع "L'ETO" -->
+        <p data-i18n="interface-rights">&copy; 2025 All Rights Reserved</p><!-- هنا حقوق النشر الخاصة بموقع "L'ETO" لعام 2025 -->
+    </footer>
+
+    <div class="language-switcher">
+        <button onclick="setLanguage('en')" data-i18n="English">English</button> |
+        <button onclick="setLanguage('ar')" data-i18n="Arabic">العربية</button>
+    </div><!-- هنا فيه أزرار لتغيير اللغة بين الإنجليزية والعربية -->
+
+    <script src="javafile.js"></script><!-- هنا يتم تحميل ملف الجافا سكربت اللي يحتوي على وظائف التفاعل في الموقع -->
+
+</body>
+</html>

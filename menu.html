@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="menu-title">Menu</title>
+    <link rel="stylesheet" href="projectStyle.css">
+    <style>
+        /* تصميم شريط التنقل العلوي */
+        .menu-nav {
+            background-color: #bb7956; /* اللون الخلفي */
+            padding: 10px; /* المسافة الداخلية */
+            text-align: center; /* تنسيق النص في المنتصف */
+            position: sticky; /* علشان يظل ثابت فوق الصفحة */
+            top: 0; /* يثبت في أعلى الصفحة */
+            z-index: 1000; /* علشان يكون فوق أي عناصر أخرى */
+        }
+
+        /* تصميم الروابط في شريط التنقل */
+        .menu-nav a {
+            margin: 0 15px; /* المسافة بين الروابط */
+            color: white; /* لون النص */
+            font-weight: bold; /* جعل النص عريض */
+            text-decoration: none; /* إزالة الخط السفلي */
+            transition: color 0.3s; /* تأثير تغير اللون */
+        }
+
+        /* تأثير التمرير على الروابط */
+        .menu-nav a:hover {
+            color: #ffb77a; /* تغيير اللون عند التمرير */
+        }
+
+        /* تصميم الأقسام المختلفة في المنيو */
+        .menu-section {
+            margin-bottom: 50px; /* المسافة بين الأقسام */
+        }
+
+        .menu-section h2 {
+            border-bottom: 2px solid #d4a373; /* خط تحت العنوان */
+            padding-bottom: 10px; /* المسافة أسفل العنوان */
+        }
+
+        /* تصميم العناصر داخل الأقسام */
+        .menu-items {
+            display: grid; /* استخدام Grid لتوزيع العناصر */
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* تقسيم الأعمدة تلقائيًا */
+            gap: 20px; /* المسافة بين العناصر */
+            margin-top: 20px; /* المسافة أعلى العناصر */
+        }
+
+        /* تصميم كل عنصر في المنيو */
+        .menu-item {
+            background-color: #f7ddc6; /* لون الخلفية */
+            padding: 15px; /* المسافة الداخلية */
+            border-radius: 10px; /* حواف دائرية */
+            text-align: center; /* النص في المنتصف */
+            transition: transform 0.3s; /* تأثير التمرير */
+        }
+
+        /* تأثير تكبير العنصر عند التمرير عليه */
+        .menu-item:hover {
+            transform: scale(1.03); /* تكبير العنصر */
+        }
+
+        /* تصميم الصور داخل العناصر */
+        .menu-item img {
+            width: 100%; /* الصورة تأخذ العرض الكامل */
+            height: 150px; /* تحديد ارتفاع الصورة */
+            object-fit: cover; /* ملائمة الصورة داخل العنصر */
+            border-radius: 8px; /* حواف دائرية للصورة */
+            margin-bottom: 10px; /* المسافة أسفل الصورة */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- العنوان الرئيسي للصفحة -->
+        <h1 data-i18n="menu-title">Menu</h1>
+    </header>
+
+    <!-- 🔹 شريط التنقل العلوي -->
+    <nav class="menu-nav">
+        <a href="#main-dishes" data-i18n="nav-main-dishes">Main Dishes</a>
+        <a href="#juices" data-i18n="nav-juices">Juices</a>
+        <a href="#salads" data-i18n="nav-salads">Salads</a>
+        <a href="#desserts" data-i18n="nav-desserts">Desserts</a>
+    </nav>
+
+    <main>
+        <!-- 🔸 قسم 1: الأطباق الرئيسية -->
+        <div id="main-dishes" class="menu-section">
+            <h2 data-i18n="main-dishes">Main Dishes</h2>
+            <div class="menu-items">
+                <div class="menu-item"><img src="https://images.pexels.com/photos/6046492/pexels-photo-6046492.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-steak">Grilled steak served with herbs.</p><p>95SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-chicken">Roasted chicken with garlic sauce.</p><p>60SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/17600209/pexels-photo-17600209/free-photo-of-a-plate-with-food-on-it-and-a-fork.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-fish">Fresh fish with lemon zest.</p><p>120SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-burger">Classic beef burger with fries.</p><p>65SR</p></div>
+            </div>
+        </div>
+        <!-- 🔸 قسم 2: العصائر -->
+        <div id="juices" class="menu-section">
+            <h2 data-i18n="juices">Juices</h2>
+            <div class="menu-items">
+                <div class="menu-item"><img src="https://images.pexels.com/photos/6412585/pexels-photo-6412585.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-orange">Freshly squeezed orange juice.</p><p>35SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-strawberry">Strawberry smoothie.</p><p>35SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/7377106/pexels-photo-7377106.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-mango">Sweet tropical mango juice.</p><p>35SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/14537765/pexels-photo-14537765.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-avocado">Creamy avocado blend.</p><p>35SR</p></div>
+            </div>
+        </div>
+        
+        <!-- 🔸 قسم 3: السلطات -->
+        <div id="salads" class="menu-section">
+            <h2 data-i18n="salads">Salads</h2>
+            <div class="menu-items">
+                <div class="menu-item"><img src="https://images.pexels.com/photos/18330477/pexels-photo-18330477/free-photo-of-a-main-course-dish-served-in-a-bowl-on-the-table.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-caesar">Classic Caesar with chicken.</p><p>80SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/6164196/pexels-photo-6164196.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-greek">Greek salad with feta cheese.</p><p>85SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/9213868/pexels-photo-9213868.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-garden">Fresh garden mix with vinaigrette.</p><p>95SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/3872373/pexels-photo-3872373.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-quinoa">Healthy quinoa and veggie bowl.</p><p>78SR</p></div>
+            </div>
+        </div>
+
+        <!-- 🔸 قسم 4: الحلويات -->
+        <div id="desserts" class="menu-section">
+            <h2 data-i18n="desserts">Desserts</h2>
+            <div class="menu-items">
+                <div class="menu-item"><img src="https://images.pexels.com/photos/13096225/pexels-photo-13096225.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-cheesecake">Delicious strawberry cheesecake.</p><p>55SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/3625371/pexels-photo-3625371.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-ice-cream">Vanilla & chocolate ice cream.</p><p>49SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/5386662/pexels-photo-5386662.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-brownie">Fudgy chocolate brownie.</p><p>59SR</p></div>
+                <div class="menu-item"><img src="https://images.pexels.com/photos/5638547/pexels-photo-5638547.jpeg?auto=compress&cs=tinysrgb&w=600"><p data-i18n="menu-mousse">Rich chocolate mousse.</p><p>55SR</p></div>
+            </div>
+        </div>
+
+        <!-- زر العودة -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="interface.html" class="button" data-i18n="reservation-back">Back to Interface</a>
+          </div>
+
+    </main>
+
+    <!-- التذييل مع رابط التواصل -->
+    <footer>
+        <div class="contact">
+            <a href="contact.html" data-i18n="interface-contact">We’d Love to Hear from You</a>
+        </div>
+        <p data-i18n="interface-rights">&copy; 2025 All Rights Reserved</p>
+    </footer>
+
+    <!-- مبدل اللغة -->
+    <div class="language-switcher">
+        <button onclick="setLanguage('en')" data-i18n="English">English</button> |
+        <button onclick="setLanguage('ar')" data-i18n="Arabic">العربية</button>
+    </div>
+
+    <script src="javafile.js"></script>
+
+</body>
+</html>
